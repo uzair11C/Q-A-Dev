@@ -15,7 +15,7 @@ a {
   box-sizing: border-box;
 }
 
-@media screen and (min-width: 121px)
+@media screen and (min-width: 121px) and (max-width: 600px)
 {
   .sel-box1
   {
@@ -49,9 +49,20 @@ a {
     justify-content: center;
     align-items: center;
   }
+
+  .acc
+  {
+    padding: 15px;
+    margin-bottom: 1px;
+  }
+
+  .acc-dets
+  {
+    font-size: 15px;
+  }
 }
 
-@media screen and (max-width: 900px)
+@media screen and (min-width: 600px) and (max-width: 900px)
 {
   .sel-box1
   {
@@ -84,6 +95,17 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .acc
+  {
+    padding: 10px;
+    margin-bottom: 2px;
+  }
+
+  .acc-dets
+  {
+    font-size: 17px;
   }
 }
 
@@ -120,5 +142,16 @@ a {
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+
+    .acc
+    {
+      padding: 15px;
+      margin-bottom: 2px;
+    }
+
+    .acc-dets
+    {
+      font-size: 20px;
     }
 }
