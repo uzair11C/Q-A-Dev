@@ -33,7 +33,7 @@ const QAccordian = () =>
                         </AccordionDetails>
                     </Accordion>
 
-                    <Accordion className='acc' sx={{backgroundColor:'primary.main',color:'white'}}>
+                    {/* <Accordion className='acc' sx={{backgroundColor:'primary.main',color:'white'}}>
                         <AccordionSummary
                             expandIcon={<ExpandMoreIcon sx={{color:'white'}} />}
                             aria-controls="panel3a-content"
@@ -52,7 +52,7 @@ const QAccordian = () =>
                                 </Button>
                             </Stack>
                         </AccordionDetails>
-                    </Accordion>
+                    </Accordion> */}
 
                     <Accordion className='acc' sx={{backgroundColor:'primary.main',color:'white'}}>
                         <AccordionSummary

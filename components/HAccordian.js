@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Accordion, AccordionSummary, AccordionDetails, Typography, Grid, Button, Stack } from '@mui/material'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Link from 'next/link'
 
 const HAccordian = () => 
 {
@@ -24,13 +25,15 @@ const HAccordian = () =>
                                     Get all the available Ahadis in Arabic and English translation
                                 </Typography>
                                 <Button variant='contained' color='secondary'>
-                                    Get All Ahadis
+                                    <Link href='/all-ahadis'>
+                                        Get All &nbsp;Ahadis
+                                    </Link>
                                 </Button>
                             </Stack>
                         </AccordionDetails>
                     </Accordion>
 
-                    <Accordion className='acc' sx={{backgroundColor:'primary.main',color:'white'}}>
+                    {/* <Accordion className='acc' sx={{backgroundColor:'primary.main',color:'white'}}>
                         <AccordionSummary
                             expandIcon={<ExpandMoreIcon sx={{color:'white'}} />}
                             aria-controls="panel3a-content"
@@ -49,7 +52,7 @@ const HAccordian = () =>
                                 </Button>
                             </Stack>
                         </AccordionDetails>
-                    </Accordion>
+                    </Accordion> */}
 
                     <Accordion className='acc' sx={{backgroundColor:'primary.main',color:'white'}}>
                         <AccordionSummary

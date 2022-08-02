@@ -2,34 +2,36 @@ import React from 'react'
 import { Container, Stack, List, ListItem, ListItemButton, Card, CardContent, Divider,Typography } from '@mui/material'
 import Link from 'next/link'
 
-const AllSurahDis = ({ smeta }) => 
+const AllAhadisDis = ({ books }) => 
 {
-    const surdata = smeta.data.surahs.references
-    //console.log(smeta.data.surahs.references)
+    const Books= books.Books
+
+    console.log(Books?.map((book)=>book))
+
   return (
         <Container maxWidth='lg' sx={{padding:'20px',display:'flex',flexDirection:'column', justifyContent:'center',alignItems:'center'}}>
             <Stack justifyContent='center' alignItems='center'>
                 <Card sx={{padding:'10px',mt:'30px',mb:'21px', backgroundColor:'#f0f1f2'}}>
                     <CardContent>
-                        <Typography variant='h3' component='h2' sx={{textAlign:'center'}}>
-                            The Holy Quran
+                        <Typography variant='h4' component='h3' sx={{textAlign:'center'}}>
+                            Ahadis e Nabawi (saww)
                         </Typography>
                     </CardContent>
                 </Card>
-                <Card sx={{width:'600px', backgroundColor:'#f0f1f2',padding:'5px'}}>
+                <Card sx={{width:'900px', backgroundColor:'#f0f1f2',padding:'5px'}}>
                     <CardContent>
                         <List>
-                            {surdata.map(surah=>(
-                            <div key={surah.number}>
+                            {Books?.map((book)=>(
+                            <div key={book.Book_ID}>
                                 <ListItem>
-                                    <Link href={`/surah/${surah.number}`}>
+                                    <Link href={`/book/${book.Book_ID}`}>
                                         <ListItemButton>
                                             <Typography variant='h5' component='p' sx={{mr:'51px'}}>
-                                                {surah.number})  {surah.englishName}
+                                                {book.Book_Name}
                                             </Typography>
-                                            <Typography variant='h5' component='p' >
-                                                {surah.name}
-                                            </Typography>
+                                            {/* <Typography variant='h5' component='p' >
+                                                books
+                                            </Typography> */}
                                             {/* <Typography variant='h5' component='p'>
                                                 {surah.englishNameTranslation}
                                             </Typography> */}
@@ -47,4 +49,4 @@ const AllSurahDis = ({ smeta }) =>
   )
 }
 
-export default AllSurahDis
+export default AllAhadisDis

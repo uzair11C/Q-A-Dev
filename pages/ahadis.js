@@ -8,7 +8,7 @@ const Ahadis = () =>
   return (
     <div>
         <Head>
-            <title>The Quran</title>
+            <title>Ahadis</title>
             <link rel="icon" href="/favicon.ico" />
         </Head>
         <Appbar />
